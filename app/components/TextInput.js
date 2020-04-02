@@ -10,7 +10,7 @@ export  default Login =(props) => {
   return (
         <View style={[styles.inputWrapper]}>
             <TextInput
-            placeholder={props.placeholder}
+            {...props}
             placeholderTextColor="#696969"
             style={styles.textInput}
             />

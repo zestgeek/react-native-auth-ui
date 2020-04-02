@@ -17,10 +17,13 @@ export  default Login =(propps) => {
           <View style={styles.form}>
             <TextInput 
               placeholder="Email"
+              keyboardType="email-address"
               icon={require('../assets/images/mail/mail.png')}
+              
             />
             <TextInput 
               placeholder="Password"
+              secureTextEntry={true}  
               icon={require('../assets/images/password/password.png')}
             />
             <Link
