@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, StatusBar } from 'react-native';
+import { SafeAreaView, StatusBar,TouchableWithoutFeedback, Keyboard } from 'react-native';
 
 
 
@@ -7,10 +7,12 @@ const AppLayout = (props) => {
  
 
   return (
-    <SafeAreaView>
-      <StatusBar />
-      {props.children}
-    </SafeAreaView>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+        <SafeAreaView style={{flex: 1}}>
+        <StatusBar barStyle="dark-content" />
+        {props.children}
+        </SafeAreaView>
+    </TouchableWithoutFeedback>
   )
 };
 
