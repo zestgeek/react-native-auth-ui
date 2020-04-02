@@ -4,9 +4,9 @@ import { StyleSheet, Text, View, AppRegistry } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
 import AppLayout from './components/AppLayout'
 import Login from './Containers/Login'
-import Signup from './pages/Signup'
-import ResetPassword from './pages/ResetPassword'
-import ForgotPassword from './pages/ForgotPassword'
+import Signup from './Containers/Signup'
+import ResetPassword from './Containers/ResetPassword'
+import ForgotPassword from './Containers/ForgotPassword'
 const Routes = () => (
     <AppLayout>
     <NativeRouter>

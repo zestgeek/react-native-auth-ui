@@ -14,6 +14,7 @@ import ForgotPassword from './ForgotPassword';
 export default class Login extends Component {
   render() {
     return (
+      
       <View style={styles.container}>
         <View style={styles.headerTitle}>
           <Text style={styles.headerText}>Log in</Text>
