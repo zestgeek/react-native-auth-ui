@@ -1,11 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
   View,
   Text,
   StyleSheet,
-  
-  Image,
-  TouchableOpacity,
 } from 'react-native';
 import AuthLayout from '../components/AuthLayout'
 import {Link, Route} from 'react-router-native';
@@ -44,33 +41,6 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 25,
-  },
-  inputWrapper: {
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
-  },
-  textInput: {
-    flex: 1,
-    color: '#696969',
-    padding: 20,
-    paddingLeft: 0,
-    borderBottomWidth: 1,
-    borderStyle: 'solid',
-    borderColor: '#707070',
-    fontFamily: 'Poppins-Medium',
-    fontSize: 16,
-    paddingTop:45
-  },
-  firstInput: {
-    marginBottom: 45,
-  },
-  icon: {
-    flex: 1,
-    resizeMode: 'stretch',
-    position: 'absolute',
-    right: 0,
-    bottom:20
   },
   navItemContainer: {
     marginTop: 35,
