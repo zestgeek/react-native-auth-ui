@@ -3,7 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
-  TextInput,
+  
   Image,
   TouchableOpacity,
 } from 'react-native';
@@ -11,34 +11,21 @@ import AuthLayout from '../components/AuthLayout'
 import {Link, Route} from 'react-router-native';
 import { useHistory } from "react-router-dom";
 import Button from '../components/Button'
+import TextInput from '../components/TextInput'
 
 export  default Login =(propps) => {
   let history = useHistory();
   return (
       <AuthLayout title="Log In">
           <View style={styles.form}>
-            <View style={[styles.inputWrapper, styles.firstInput]}>
-              <TextInput
-                placeholder="Email"
-                placeholderTextColor="#696969"
-                style={styles.textInput}
-              />
-              <Image
-                source={require('../assets/images/mail/mail.png')}
-                style={styles.icon}
-              />
-            </View>
-            <View style={styles.inputWrapper}>
-              <TextInput
-                placeholder="Password"
-                placeholderTextColor="#696969"
-                style={styles.textInput}
-              />
-              <Image
-                source={require('../assets/images/password/password.png')}
-                style={styles.icon}
-              />
-            </View>
+            <TextInput 
+              placeholder="Email"
+              icon={require('../assets/images/mail/mail.png')}
+            />
+            <TextInput 
+              placeholder="Password"
+              icon={require('../assets/images/password/password.png')}
+            />
             <Link
               to="/forgotpassword"
               underlayColor="#f0f4f7"
@@ -56,12 +43,12 @@ const styles = StyleSheet.create({
   form: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingTop: 72,
+    paddingTop: 25,
   },
   inputWrapper: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
   },
   textInput: {
     flex: 1,
@@ -73,6 +60,7 @@ const styles = StyleSheet.create({
     borderColor: '#707070',
     fontFamily: 'Poppins-Medium',
     fontSize: 16,
+    paddingTop:45
   },
   firstInput: {
     marginBottom: 45,
@@ -82,6 +70,7 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
     position: 'absolute',
     right: 0,
+    bottom:20
   },
   navItemContainer: {
     marginTop: 35,
