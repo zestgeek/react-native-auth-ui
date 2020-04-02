@@ -11,7 +11,7 @@ const Routes = () => (
     <AppLayout>
     <NativeRouter>
         <Route exact path="/" component={Login} />
-        <Route path="/signup" component={Signup} />
+        <Route path="/register" component={Signup} />
         <Route path="/resetpassword" component={ResetPassword} />
         <Route path="/forgotpassword" component={ForgotPassword} />
     </NativeRouter>

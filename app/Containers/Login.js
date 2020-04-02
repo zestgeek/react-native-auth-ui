@@ -7,19 +7,15 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
+import AuthLayout from '../components/AuthLayout'
 import {Link, Route} from 'react-router-native';
+import { useHistory } from "react-router-dom";
+import Button from '../components/Button'
 
-import ForgotPassword from './ForgotPassword';
-
-export default class Login extends Component {
-  render() {
-    return (
-      
-      <View style={styles.container}>
-        <View style={styles.headerTitle}>
-          <Text style={styles.headerText}>Log in</Text>
-        </View>
-        <View style={styles.content}>
+export  default Login =(propps) => {
+  let history = useHistory();
+  return (
+      <AuthLayout title="Log In">
           <View style={styles.form}>
             <View style={[styles.inputWrapper, styles.firstInput]}>
               <TextInput
@@ -49,39 +45,14 @@ export default class Login extends Component {
               style={styles.navItemContainer}>
               <Text style={styles.navItemText}>Forgot password ?</Text>
             </Link>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>Log in</Text>
-            </TouchableOpacity>
+            <Button title="Log In"/>
+            <Button title="Register" onPress={()=>history.push('/register')}/>
           </View>
-        </View>
-        <Route exact path="/forgotpassword" component={ForgotPassword} />
-      </View>
+        </AuthLayout>
     );
   }
-}
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#8CC33F',
-  },
-  headerTitle: {
-    marginTop: 25,
-    padding: 20,
-    flex: 1,
-  },
-  headerText: {
-    color: '#fff',
-    fontSize: 20,
-    fontFamily: 'Poppins-Semibold',
-    letterSpacing: 0,
-  },
-  content: {
-    backgroundColor: '#fff',
-    flex: 3,
-    borderTopLeftRadius: 50,
-    borderTopRightRadius: 50,
-  },
+
   form: {
     paddingLeft: 20,
     paddingRight: 20,
@@ -130,6 +101,7 @@ const styles = StyleSheet.create({
     paddingRight: 30,
     alignSelf: 'center',
     borderRadius: 30,
+    marginBottom:16
   },
   buttonText: {
     color: '#fff',
