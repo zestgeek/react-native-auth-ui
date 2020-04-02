@@ -2,12 +2,12 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Link } from "react-router-native";
 
-const ForgotPassword = () => (
+const ResetPassword = () => (
     <View style={styles.container}>
-    <Text style={styles.header}>ForgotPassword Page</Text>
+    <Text style={styles.header}>ResetPassword Page</Text>
       <View style={styles.nav}>
-        <Link to="/resetpassword" underlayColor="#f0f4f7" style={styles.navItem}>
-          <Text>Go To Reset Password</Text>
+        <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
+          <Text>Go To login</Text>
         </Link>
       </View>
     </View>
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default ForgotPassword
+export default ResetPassword
