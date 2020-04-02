@@ -4,16 +4,19 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
+import { withTheme } from '../core/themeProvider';
 
 
 
-export  default Button =(props) => {
+const Button =(props) => {
+  const {theme} = props;
   return (
-            <TouchableOpacity style={styles.button} {...props}>
-              <Text style={styles.buttonText}>{props.title}</Text>
+            <TouchableOpacity style={[styles.button,{borderColor:theme.backgroundColor}]} {...props}>
+              <Text style={[styles.buttonText,{color:theme.backgroundColor}]}>{props.title}</Text>
             </TouchableOpacity>
     );
   }
+export default withTheme(Button)
 const styles = StyleSheet.create({
   button: {
     borderColor: '#8CC33F',
