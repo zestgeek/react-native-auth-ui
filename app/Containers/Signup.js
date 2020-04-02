@@ -1,35 +1,63 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Link } from "react-router-native";
+import React from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+} from 'react-native';
+import AuthLayout from '../components/AuthLayout'
+import {Link, Route} from 'react-router-native';
+import { useHistory } from "react-router-dom";
+import Button from '../components/Button'
+import TextInput from '../components/TextInput'
 
-const Signup = () => (
-    <View style={styles.container}>
-    <Text style={styles.header}>Signup Page</Text>
-      <View style={styles.nav}>
-        <Link to="/forgotpassword" underlayColor="#f0f4f7" style={styles.navItem}>
-          <Text>Go To Forgot Password</Text>
-        </Link>
-      </View>
-    </View>
-);
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 25,
-    padding: 10
-  },
-  header: {
-    fontSize: 20
-  },
-  nav: {
-    flexDirection: "row",
-    justifyContent: "space-around"
-  },
-  navItem: {
-    flex: 1,
-    alignItems: "center",
-    padding: 10
+export  default Signup =(propps) => {
+  let history = useHistory();
+  return (
+      <AuthLayout title="Sign Up">
+          <View style={styles.form}>
+            <TextInput 
+              placeholder="Name"
+              icon={require('../assets/images/mail/mail.png')}
+              
+            />
+             <TextInput 
+                placeholder="Email"
+                keyboardType="email-address"
+                icon={require('../assets/images/mail/mail.png')}
+                
+              />
+            <TextInput 
+              placeholder="Password"
+              secureTextEntry={true}  
+              icon={require('../assets/images/password/password.png')}
+            />
+            <TextInput 
+              placeholder="Confirm Password"
+              secureTextEntry={true}  
+              icon={require('../assets/images/password/password.png')}
+            />
+            <Button title="Sign Up" />
+            <Button title="Log In" onPress={()=>history.push('/')}/>
+            
+          </View>
+        </AuthLayout>
+    );
   }
-});
+const styles = StyleSheet.create({
 
-export default Signup
+  form: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 25,
+  },
+  navItemContainer: {
+    marginTop: 35,
+    marginBottom: 35,
+    alignSelf: 'center',
+  },
+  navItemText: {
+    fontSize: 18,
+    color: '#696969',
+    fontFamily: 'Poppins-Medium',
+  },
+});
