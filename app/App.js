@@ -5,6 +5,8 @@ import {
   SafeAreaView,
   Keyboard,
   TouchableWithoutFeedback,
+  KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import {NativeRouter} from 'react-router-native';
 
@@ -12,12 +14,17 @@ import Login from './Containers/Login';
 
 const App = () => (
   <NativeRouter>
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-      <SafeAreaView style={{flex: 1}}>
-        <StatusBar barStyle="dark-content" />
-        <Login />
-      </SafeAreaView>
-    </TouchableWithoutFeedback>
+    <KeyboardAvoidingView
+      style={{flex: 1}}
+      behavior={Platform.Os == 'ios' ? 'padding' : 'height'}
+      resetScrollToCoords={{x: 0, y: 0}}>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+        <SafeAreaView style={{flex: 1}}>
+          <StatusBar barStyle="dark-content" />
+          <Login />
+        </SafeAreaView>
+      </TouchableWithoutFeedback>
+    </KeyboardAvoidingView>
   </NativeRouter>
 );
 

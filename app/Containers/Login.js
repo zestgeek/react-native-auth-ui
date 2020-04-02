@@ -36,6 +36,7 @@ export default class Login extends Component {
                 placeholder="Password"
                 placeholderTextColor="#696969"
                 style={styles.textInput}
+                secureTextEntry
               />
               <Image
                 source={require('../assets/images/password/password.png')}
