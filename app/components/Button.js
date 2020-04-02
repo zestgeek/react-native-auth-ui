@@ -16,7 +16,8 @@ export  default Button =(props) => {
   }
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#8CC33F',
+    borderColor: '#8CC33F',
+    borderWidth: 2,
     paddingTop: 10,
     paddingBottom: 10,
     paddingLeft: 30,
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     marginTop:35
   },
   buttonText: {
-    color: '#fff',
+    color: '#8CC33F',
     fontSize: 18,
     fontFamily: 'Poppins-Medium',
   },
