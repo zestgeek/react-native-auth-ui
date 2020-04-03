@@ -44,7 +44,6 @@ export  default Signup =(propps) => {
     );
   }
 const styles = StyleSheet.create({
-
   form: {
     paddingLeft: 20,
     paddingRight: 20,

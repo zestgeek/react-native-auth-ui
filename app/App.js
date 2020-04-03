@@ -11,4 +11,4 @@ const Routes = () => (
   </ThemeContextProvider>
 );
 
-export default Routes
+export default Routes;

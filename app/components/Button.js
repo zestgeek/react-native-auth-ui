@@ -11,7 +11,7 @@ import { withTheme } from '../core/themeProvider';
 const Button =(props) => {
   const {theme} = props;
   return (
-            <TouchableOpacity style={[styles.button,{borderColor:theme.backgroundColor}]} {...props}>
+            <TouchableOpacity style={[styles.button,{borderColor:theme.backgroundColor, marginTop: props.marginTop || 0}]} {...props}>
               <Text style={[styles.buttonText,{color:theme.backgroundColor}]}>{props.title}</Text>
             </TouchableOpacity>
     );
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     paddingRight: 30,
     alignSelf: 'center',
     borderRadius: 30,
-    marginTop:35
+    marginBottom: 35,
   },
   buttonText: {
     color: '#8CC33F',

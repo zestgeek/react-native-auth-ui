@@ -1,16 +1,12 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-} from 'react-native';
-import AuthLayout from '../components/AuthLayout'
+import {View, Text, StyleSheet} from 'react-native';
+import AuthLayout from '../components/AuthLayout';
 import {Link, Route} from 'react-router-native';
-import { useHistory } from "react-router-dom";
-import Button from '../components/Button'
-import TextInput from '../components/TextInput'
+import {useHistory} from 'react-router-dom';
+import Button from '../components/Button';
+import TextInput from '../components/TextInput';
 
-export  default Login =(propps) => {
+export default Login = propps => {
   let history = useHistory();
   return (
       <AuthLayout title="Log In">
@@ -39,7 +35,6 @@ export  default Login =(propps) => {
     );
   }
 const styles = StyleSheet.create({
-
   form: {
     paddingLeft: 20,
     paddingRight: 20,
