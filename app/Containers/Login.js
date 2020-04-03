@@ -28,7 +28,7 @@ export default Login = propps => {
               style={styles.navItemContainer}>
               <Text style={styles.navItemText}>Forgot password ?</Text>
             </Link>
-            <Button title="Log In"/>
+            <Button title="Log In" marginTop={45}/>
             <Button title="Sign Up" onPress={()=>history.push('/register')}/>
           </View>
         </AuthLayout>

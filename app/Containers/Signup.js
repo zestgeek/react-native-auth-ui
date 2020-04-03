@@ -36,7 +36,7 @@ export  default Signup =(propps) => {
               secureTextEntry={true}  
               icon={require('../assets/images/password/password.png')}
             />
-            <Button title="Sign Up" />
+            <Button title="Sign Up" marginTop={45}/>
             <Button title="Log In" onPress={()=>history.push('/')}/>
             
           </View>
