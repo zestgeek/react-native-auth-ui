@@ -3,9 +3,7 @@ import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 export default Button = props => {
   return (
-    <TouchableOpacity
-      style={[styles.button, {marginTop: props.marginTop || 0}]}
-      {...props}>
+    <TouchableOpacity style={[styles.button]} {...props}>
       <Text style={styles.buttonText}>{props.title}</Text>
     </TouchableOpacity>
   );
@@ -19,7 +17,7 @@ const styles = StyleSheet.create({
     paddingRight: 30,
     alignSelf: 'center',
     borderRadius: 30,
-    marginBottom: 35,
+    marginTop: 35,
   },
   buttonText: {
     color: '#fff',

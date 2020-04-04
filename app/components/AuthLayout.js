@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   content: {
     backgroundColor: '#fff',
-    flex: 3,
+    flex: 4,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
   },
