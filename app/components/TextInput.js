@@ -3,16 +3,19 @@ import {
   View,
   StyleSheet,
   TextInput,
-  Image,
+  Image
 } from 'react-native';
 
 export  default Login =(props) => {
+  const [border,setBorder] =React.useState('#707070')
   return (
         <View style={[styles.inputWrapper]}>
             <TextInput
             {...props}
             placeholderTextColor="#696969"
-            style={styles.textInput}
+            style={[styles.textInput,{borderColor:border}]}
+            onFocus={()=>setBorder('#8CC33F')}
+            onBlur={()=>setBorder('#696969')}
             />
             {props.icon && 
                 <Image
@@ -37,7 +40,6 @@ const styles = StyleSheet.create({
     paddingLeft: 0,
     borderBottomWidth: 1,
     borderStyle: 'solid',
-    borderColor: '#707070',
     fontFamily: 'Poppins-Medium',
     fontSize: 16,
     paddingTop:45
