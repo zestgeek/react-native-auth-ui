@@ -6,34 +6,33 @@ import {useHistory} from 'react-router-dom';
 import Button from '../components/Button';
 import TextInput from '../components/TextInput';
 
-export default Login = propps => {
+export default Login = props => {
   let history = useHistory();
   return (
-      <AuthLayout title="Log In">
-          <View style={styles.form}>
-            <TextInput 
-              placeholder="Email"
-              keyboardType="email-address"
-              icon={require('../assets/images/mail/mail.png')}
-              
-            />
-            <TextInput 
-              placeholder="Password"
-              secureTextEntry={true}  
-              icon={require('../assets/images/password/password.png')}
-            />
-            <Link
-              to="/forgotpassword"
-              underlayColor="#f0f4f7"
-              style={styles.navItemContainer}>
-              <Text style={styles.navItemText}>Forgot password ?</Text>
-            </Link>
-            <Button title="Log In" marginTop={45}/>
-            <Button title="Sign Up" onPress={()=>history.push('/register')}/>
-          </View>
-        </AuthLayout>
-    );
-  }
+    <AuthLayout title="Log In">
+      <View style={styles.form}>
+        <TextInput
+          placeholder="Email"
+          keyboardType="email-address"
+          icon={require('../assets/images/mail/mail.png')}
+        />
+          <TextInput
+            placeholder="Password"
+            secureTextEntry={true}
+            icon={require('../assets/images/password/password.png')}
+          />
+        <Link
+          to="/forgotpassword"
+          underlayColor="#f0f4f7"
+          style={styles.navItemContainer}>
+          <Text style={styles.navItemText}>Forgot password ?</Text>
+        </Link>
+        <Button title="Log In" onPress={() => history.push('/settings')} />
+        <Button title="Sign Up" onPress={() => history.push('/register')} />
+      </View>
+    </AuthLayout>
+  );
+};
 const styles = StyleSheet.create({
   form: {
     paddingLeft: 20,

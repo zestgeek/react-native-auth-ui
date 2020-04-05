@@ -11,11 +11,11 @@ import { withTheme } from '../core/themeProvider';
 const Button =(props) => {
   const {theme} = props;
   return (
-            <TouchableOpacity style={[styles.button,{borderColor:theme.backgroundColor, marginTop: props.marginTop || 0}]} {...props}>
-              <Text style={[styles.buttonText,{color:theme.backgroundColor}]}>{props.title}</Text>
-            </TouchableOpacity>
-    );
-  }
+    <TouchableOpacity style={[styles.button,{borderColor:theme.backgroundColor}]} {...props}>
+      <Text style={styles.buttonText}>{props.title}</Text>
+    </TouchableOpacity>
+  );
+};
 export default withTheme(Button)
 const styles = StyleSheet.create({
   button: {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     paddingRight: 30,
     alignSelf: 'center',
     borderRadius: 30,
-    marginBottom: 35,
+    marginTop: 35,
   },
   buttonText: {
     color: '#8CC33F',
