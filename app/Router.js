@@ -9,6 +9,7 @@ import ResetPassword from './Containers/ResetPassword';
 import ForgotPassword from './Containers/ForgotPassword';
 import Account from './Containers/Account';
 import Settings from './Containers/Settings';
+import Messages from './Containers/Messages';
 
 const Routes = () => (
   <AppLayout>
@@ -19,6 +20,7 @@ const Routes = () => (
       <Route path="/forgotpassword" component={ForgotPassword} />
       <Route path="/account" component={Account} />
       <Route path="/settings" component={Settings} />
+      <Route path="/messages" component={Messages} />
     </NativeRouter>
   </AppLayout>
 );

@@ -1,22 +1,22 @@
 [
-    {
-      "key": "Green",
-      "backgroundColor": "#8CC33F",
-      "color": "##696969"
-    },
-    {
-      "key": "theme2",
-      "backgroundColor": "#2EC4B6",
-      "color": "#ffffff"
-    },
-    {
-      "key": "theme3",
-      "backgroundColor": "#E71D36",
-      "color": "#ffffff"
-    },
-    {
-      "key": "theme4",
-      "backgroundColor": "#FF9F1C",
-      "color": "#1F2D3D"
-    }
-  ]
+  {
+    "key": "Green",
+    "backgroundColor": "#8CC33F",
+    "color": "#696969"
+  },
+  {
+    "key": "theme2",
+    "backgroundColor": "#2EC4B6",
+    "color": "#ffffff"
+  },
+  {
+    "key": "theme3",
+    "backgroundColor": "#E71D36",
+    "color": "#ffffff"
+  },
+  {
+    "key": "theme4",
+    "backgroundColor": "#FF9F1C",
+    "color": "#1F2D3D"
+  }
+]

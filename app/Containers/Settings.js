@@ -1,11 +1,7 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image
-} from 'react-native';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {Link} from 'react-router-native';
+import {useHistory} from 'react-router-dom';
 
 import AppLayout from '../components/AppLayout';
 import MenuItemNav from '../components/MenuItemNav';
@@ -48,13 +44,16 @@ const menus = [
   },
 ];
 
-export default Account = props => {
+export default Account = (props) => {
+  const history = useHistory();
   return (
     <AppLayout>
       <View style={styles.header}>
-        <Link to="/" style={styles.backButton} underlayColor="transparent">
+        <TouchableOpacity
+          onPress={() => history.goBack()}
+          style={styles.backButton}>
           <Image source={require('../assets/images/backArrow/backArrow.png')} />
-        </Link>
+        </TouchableOpacity>
         <Text style={styles.title}>Settings</Text>
       </View>
       <View>

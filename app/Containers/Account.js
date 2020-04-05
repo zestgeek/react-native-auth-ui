@@ -33,7 +33,7 @@ const menus = [
   },
 ];
 
-export default Account = props => {
+export default Account = (props) => {
   let history = useHistory();
   return (
     <AuthLayout title="Account" showBackButton>

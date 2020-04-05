@@ -6,7 +6,7 @@ import {useHistory} from 'react-router-dom';
 import Button from '../components/Button';
 import TextInput from '../components/TextInput';
 
-export default Login = props => {
+export default Login = (props) => {
   let history = useHistory();
   return (
     <AuthLayout title="Log In">
@@ -16,18 +16,18 @@ export default Login = props => {
           keyboardType="email-address"
           icon={require('../assets/images/mail/mail.png')}
         />
-          <TextInput
-            placeholder="Password"
-            secureTextEntry={true}
-            icon={require('../assets/images/password/password.png')}
-          />
+        <TextInput
+          placeholder="Password"
+          secureTextEntry={true}
+          icon={require('../assets/images/password/password.png')}
+        />
         <Link
           to="/forgotpassword"
           underlayColor="#f0f4f7"
           style={styles.navItemContainer}>
           <Text style={styles.navItemText}>Forgot password ?</Text>
         </Link>
-        <Button title="Log In" onPress={() => history.push('/settings')} />
+        <Button title="Log In" onPress={() => history.push('/messages')} />
         <Button title="Sign Up" onPress={() => history.push('/register')} />
       </View>
     </AuthLayout>
@@ -47,5 +47,5 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#696969',
     fontFamily: 'Poppins-Medium',
-  }
+  },
 });

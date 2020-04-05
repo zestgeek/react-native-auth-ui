@@ -1,25 +1,31 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {Link} from 'react-router-native';
+import {useHistory} from 'react-router-dom';
 
-const AuthLayout = props => (
-  <View style={styles.container}>
-    <View style={styles.headerTitle}>
-      <View style={{flexDirection: 'row'}}>
-        {props.showBackButton ? (
-          <Link to="/" style={styles.backButton} underlayColor="transparent">
-            <Image
-              source={require('../assets/images/backArrow/backArrow.png')}
-              style={styles.icon}
-            />
-          </Link>
-        ) : null}
-        <Text style={[styles.headerText]}>{props.title}</Text>
+const AuthLayout = (props) => {
+  const history = useHistory();
+  return (
+    <View style={styles.container}>
+      <View style={styles.headerTitle}>
+        <View style={{flexDirection: 'row'}}>
+          {props.showBackButton ? (
+            <TouchableOpacity
+              style={styles.backButton}
+              onPress={() => history.goBack()}>
+              <Image
+                source={require('../assets/images/backArrow/backArrow.png')}
+                style={styles.icon}
+              />
+            </TouchableOpacity>
+          ) : null}
+          <Text style={[styles.headerText]}>{props.title}</Text>
+        </View>
       </View>
+      <View style={styles.content}>{props.children}</View>
     </View>
-    <View style={styles.content}>{props.children}</View>
-  </View>
-);
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
