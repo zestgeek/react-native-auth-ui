@@ -1,7 +1,19 @@
 # React Native Auth UI
 
-UI Screens for Login, Signup, Forgot password and Reset password screens for React-Native. 
+UI Screens for Login, Signup, Forgot password and Reset password screens for React-Native.
 
+## Preview
+<p align="center">
+  <img width="270" src="./previews/Login.png">
+  <img width="250" src="./previews/Singup.png">
+  <img width="250" src="./previews/Forgot-Password.png">
+  
+</p>
+<p align="center">
+  <img width="250" src="./previews/Reset-Passwore.png">
+  <img width="250" src="./previews/Account-Settings.png">
+  <img width="250" src="./previews/User-Account.png">
+</p>
 ## Installation
 .
 
