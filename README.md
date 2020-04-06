@@ -38,5 +38,7 @@ Please make sure to update tests as appropriate.
 * [lovetrivedi](https://github.com/lovetrivedi) - Love Trivedi
 * [ramkumar897003](https://github.com/ramkumar897003) - Ram Kumar
 
+[<img src="http://zestgeek.com/wp-content/uploads/Zestgeek-new-logo-2.png" alt="Zestgeek Solutions Private Limited" width="150"/>](http://zestgeek.com)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
